@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — Laboratoire SoMA</title>
+<meta name="description" content="The team of Laboratoire SoMA — Scales of Microbial Architectonics.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..600;1,400&display=swap" rel="stylesheet">
+<script>/* read the saved theme before first paint, to avoid a flash */try{var t=localStorage.getItem("soma-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <header class="site-head">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark__sub">Laboratoire</span>
+      <span class="wordmark__name">SoMA</span>
+    </a>
+    <div class="site-head__end">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" hidden
+              aria-label="Switch to the dark theme" aria-pressed="false">
+        <span class="theme-toggle__lamp" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="band band--tight">
+      <h1 class="display display--wide">Team</h1>
+      <hr class="ribbing">
+    </section>
+
+    <!--
+      ===================================================================
+      HOW TO ADD SOMEONE
+      ===================================================================
+      Everyone is one <li class="person"> in a single list, in rank order.
+      The PI is first and gets no other distinction. Copy a block, paste it
+      where the person belongs, edit it. Keep the shape: a portrait, then a
+      <div> holding everything else — the row is a two-column grid and the
+      <div> is what fills the second column.
+
+      Three parts are optional and can each be deleted outright:
+
+      1. PORTRAIT. Replace
+           <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+         with
+           <img class="person__portrait" src="assets/img/people/name.jpg" alt="">
+         Images live in assets/img/people/. 600×750px or larger; the stylesheet
+         crops to 4:5 and desaturates slightly so a set of photos taken in
+         different places still sits together.
+
+      2. FLAGS — country of origin, next to the name:
+           <span class="person__flags" role="img" aria-label="Italy">🇮🇹</span>
+         Two or more: put them in the same span, separated by a hairspace, and
+         list both in the aria-label —
+           <span class="person__flags" role="img" aria-label="Italy and Brazil">🇮🇹 🇧🇷</span>
+         The aria-label is what a screen reader says, so name the countries in
+         words; a flag emoji on its own is announced as two letters or nothing.
+         Delete the whole span for anyone who would rather not have one — this
+         is the kind of thing to let people opt into rather than assign.
+         Flag emoji are two regional-indicator letters (🇮🇹 = R-I I + R-I T).
+         Easiest source: emojipedia.org/flags — copy and paste.
+
+      3. FACTS — the <ul class="person__facts"> under the name. One line each:
+         degrees, previous posts, fellowships. Keep them short and in reverse
+         chronological order. Wrap a year or place in <span class="when"> to
+         grey it back. Delete the whole <ul> if you would rather just have the
+         sentence of prose.
+      ===================================================================
+    -->
+
+    <!-- ==================================================== members ====
+         One list, in rank order. The PI is simply the first entry — same
+         row, same portrait size, same everything. To reorder, move a whole
+         <li> block; nothing else needs changing.
+    -->
+    <section class="band band--tight">
+      <div class="row">
+        <p class="label">Members</p>
+        <div>
+          <ul class="roster">
+
+            <li class="person">
+              <!-- todo: assets/img/people/shoemaker.jpg -->
+              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+              <div>
+                <h3 class="person__name">
+                  William R. Shoemaker
+                  <span class="person__flags" role="img" aria-label="United States">🇺🇸</span>
+                </h3>
+                <p class="label">Principal investigator</p>
+                <ul class="person__facts">
+                  <li>Postdoc, ICTP Trieste, with Jacopo Grilli <span class="when">2021–2026</span></li>
+                  <li>PhD in Biology, Indiana University, with Jay Lennon <span class="when">2020</span></li>
+                  <li>BSc, James Madison University</li>
+                </ul>
+                <p>
+                  Will works on the macroecology and evolution of microbial
+                  communities, using minimal stochastic models to ask which
+                  features of a community are predictable and which are not.
+                </p>
+                <ul class="person__links">
+                  <li><a href="https://wrshoemaker.github.io/">Personal site</a></li>
+                  <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
+                  <li><a href="https://scholar.google.com/citations?user=">Scholar</a></li>
+                  <li><a href="https://orcid.org/">ORCID</a></li>
+                  <li><a href="mailto:first.last@example.edu">Email</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Full example: portrait, flag, facts, prose, links. -->
+            <li class="person">
+              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+              <div>
+                <h3 class="person__name">
+                  <span class="todo">Name</span>
+                  <span class="person__flags" role="img" aria-label="Italy">🇮🇹</span>
+                </h3>
+                <p class="label">Postdoctoral researcher</p>
+                <ul class="person__facts">
+                  <li>PhD in Physics, <span class="todo">University</span> <span class="when">20XX</span></li>
+                  <li>MSc in <span class="todo">Subject</span>, <span class="todo">University</span></li>
+                </ul>
+                <p>One or two sentences on what they work on here.</p>
+                <ul class="person__links">
+                  <li><a href="#">Site</a></li>
+                  <li><a href="#">Scholar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Two countries. -->
+            <li class="person">
+              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+              <div>
+                <h3 class="person__name">
+                  <span class="todo">Name</span>
+                  <span class="person__flags" role="img" aria-label="France and Vietnam">🇫🇷 🇻🇳</span>
+                </h3>
+                <p class="label">PhD student</p>
+                <ul class="person__facts">
+                  <li>MSc in Ecology, <span class="todo">University</span> <span class="when">20XX</span></li>
+                </ul>
+                <p>One or two sentences on what they work on here.</p>
+                <ul class="person__links">
+                  <li><a href="#">Site</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Minimal: no flag, no facts. Both are optional. -->
+            <li class="person">
+              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+              <div>
+                <h3 class="person__name"><span class="todo">Name</span></h3>
+                <p class="label">Master's student</p>
+                <p>One or two sentences on what they work on here.</p>
+              </div>
+            </li>
+
+          </ul>
+
+          <p class="footnote">
+            The group is forming. If you would like to be on this page, see
+            <a class="link" href="join.html">Join</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== alumni ==== -->
+    <section class="band band--rule">
+      <div class="row">
+        <p class="label">Alumni</p>
+        <div>
+          <!-- Flags work here too, same markup, if you want them. -->
+          <ul class="alumni">
+            <li><span class="todo">Name</span> — <span>Master's student, 20XX–20XX · now at somewhere</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================== collaborators ==== -->
+    <section class="band band--rule">
+      <div class="row">
+        <p class="label">Collaborators</p>
+        <div class="prose">
+          <p>
+            Much of our work is done with other groups. Recent collaborators
+            include <a href="https://jacopogrilli.github.io/">Jacopo Grilli</a>
+            (ICTP), Jay Lennon (Indiana University), Nandita Garud (UCLA) and
+            Álvaro Sánchez (CNB-CSIC).
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div>
+      <p class="label">Laboratoire SoMA</p>
+      <p>Scales of Microbial Architectonics<br>
+         <span class="todo">[Department]</span><br>
+         <span class="todo">[Institution]</span><br>
+         <span class="todo">[City, Country]</span></p>
+    </div>
+    <div>
+      <p class="label">Contact</p>
+      <ul class="foot-links">
+        <li><a href="mailto:first.last@example.edu">first.last@example.edu</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Elsewhere</p>
+      <ul class="foot-links">
+        <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=" rel="me">Google Scholar</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+    <p class="colophon">© 2026 Laboratoire SoMA</p>
+  </footer>
+
+</div>
+
+<script src="assets/js/theme.js" defer></script>
+</body>
+</html>

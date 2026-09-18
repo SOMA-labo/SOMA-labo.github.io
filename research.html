@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Laboratoire SoMA</title>
+<meta name="description" content="Macroecological laws, minimal models, experimental tests, and the evolutionary consequences of microbial life history.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..600;1,400&display=swap" rel="stylesheet">
+<script>/* read the saved theme before first paint, to avoid a flash */try{var t=localStorage.getItem("soma-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <header class="site-head">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark__sub">Laboratoire</span>
+      <span class="wordmark__name">SoMA</span>
+    </a>
+    <div class="site-head__end">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" hidden
+              aria-label="Switch to the dark theme" aria-pressed="false">
+        <span class="theme-toggle__lamp" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="band band--tight">
+      <h1 class="display display--wide">Four questions, one set of tools.</h1>
+      <p class="lede prose" style="margin-top:1.5rem">
+        Everything below rests on the same bet: that the statistical behaviour of
+        a microbial community can be captured by models with very few moving
+        parts, and that the places where those models break are where the biology
+        is hiding.
+      </p>
+      <hr class="ribbing">
+    </section>
+
+    <section class="band band--tight">
+
+      <!-- ================================================== strand 1 ==== -->
+      <article class="strand">
+        <div class="row">
+          <p class="label label--num">01 / Laws</p>
+          <div class="strand__body prose">
+            <h2>Macroecological patterns and the models that generate them</h2>
+            <p>
+              Abundance distributions, the scaling of variance with mean, the
+              relationship between occupancy and abundance — the same handful of
+              patterns recur across soils, oceans, hosts and bioreactors. We ask
+              what minimal process can produce all of them at once. A stochastic
+              logistic model of growth, with environmental noise and a carrying
+              capacity, turns out to reproduce a surprising amount of it, which
+              raises the more interesting question of what it <em>cannot</em> do.
+            </p>
+            <p>
+              Related work:
+              <a href="https://doi.org/10.7554/eLife.89650.3">eLife 2024</a>,
+              <a href="https://doi.org/10.1038/s41559-017-0107">Nat. Ecol. Evol. 2017</a>,
+              <a href="https://doi.org/10.32942/X2008N">a survey and outlook</a>.
+            </p>
+
+            <!-- todo: swap in a real figure. Keep the figure ~1600px wide. -->
+            <figure class="plate plate--empty">
+              <figcaption><span class="todo">assets/img/research-01.jpg</span> — e.g. the abundance fluctuation distribution collapsing across environments.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================================================== strand 2 ==== -->
+      <article class="strand">
+        <div class="row">
+          <p class="label label--num">02 / Experiments</p>
+          <div class="strand__body prose">
+            <h2>Putting the laws under experimental stress</h2>
+            <p>
+              Patterns observed in survey data are easy to explain and hard to
+              falsify. Experimental communities let us do better: we can fix the
+              environment, replicate it, perturb it, and then ask whether the
+              statistical regularities hold, shift, or disappear. Recent work has
+              looked at how a balance between environmental filtering and
+              competitive exclusion shapes alternative stable states, and at what
+              survives when a community is assembled from scratch.
+            </p>
+            <p>
+              Related work:
+              <a href="https://doi.org/10.1371/journal.pcbi.1013044">PLOS Comput. Biol. 2025</a>,
+              <a href="https://doi.org/10.64898/2025.12.19.695337">preprint 2025</a>.
+            </p>
+
+            <figure class="plate plate--empty plate--offset">
+              <figcaption><span class="todo">assets/img/research-02.jpg</span> — e.g. replicate communities converging on alternative states.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================================================== strand 3 ==== -->
+      <article class="strand">
+        <div class="row">
+          <p class="label label--num">03 / Life history</p>
+          <div class="strand__body prose">
+            <h2>Dormancy, energy limitation and the cost of waiting</h2>
+            <p>
+              Most microbial cells, most of the time, are not growing. Dormancy
+              and sporulation create a seed bank that buffers populations against
+              bad conditions — and in doing so they slow evolution, change which
+              mutations fix, and alter how a lineage responds to selection. We
+              study the bioenergetics of these strategies and their consequences
+              for population genetics, including what happens under energy
+              limitation severe enough that maintenance, not growth, sets the pace.
+            </p>
+            <p>
+              Related work:
+              <a href="https://doi.org/10.1073/pnas.2524274123">PNAS 2026</a>,
+              <a href="https://doi.org/10.1093/molbev/msab195">Mol. Biol. Evol. 2021</a>,
+              <a href="https://doi.org/10.1111/eva.12557">Evol. Appl. 2018</a>.
+            </p>
+
+            <figure class="plate plate--empty">
+              <figcaption><span class="todo">assets/img/research-03.jpg</span> — e.g. the seed-bank effect on the site frequency spectrum.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================================================== strand 4 ==== -->
+      <article class="strand">
+        <div class="row">
+          <p class="label label--num">04 / Evolution in situ</p>
+          <div class="strand__body prose">
+            <h2>Strains, sojourns and evolution inside a host</h2>
+            <p>
+              The human gut is an evolution experiment nobody designed, running
+              in billions of replicates. Dense time series let us watch strains
+              rise and fall, ask how long a lineage persists once it arrives, and
+              test whether ecological stability at the species level is really
+              stability at the level of strains. The same macroecological language
+              applies, one level down.
+            </p>
+            <p>
+              Related work:
+              <a href="https://doi.org/10.1128/msystems.01221-25">mSystems 2026</a>,
+              <a href="https://doi.org/10.1128/mbio.02502-22">mBio 2023</a>,
+              <a href="https://doi.org/10.1093/gbe/evab116">GBE 2022</a>.
+            </p>
+
+            <figure class="plate plate--empty plate--offset">
+              <figcaption><span class="todo">assets/img/research-04.jpg</span> — e.g. strain trajectories through time in a single host.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="band band--rule">
+      <div class="row">
+        <p class="label">Code &amp; data</p>
+        <div class="prose">
+          <p>
+            Analysis code for our papers is on
+            <a href="https://github.com/wrshoemaker">GitHub</a>, and processed
+            data are deposited on Zenodo. Every entry on the
+            <a href="publications.html">publications page</a> links to whatever
+            exists for that paper.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div>
+      <p class="label">Laboratoire SoMA</p>
+      <p>Scales of Microbial Architectonics<br>
+         <span class="todo">[Department]</span><br>
+         <span class="todo">[Institution]</span><br>
+         <span class="todo">[City, Country]</span></p>
+    </div>
+    <div>
+      <p class="label">Contact</p>
+      <ul class="foot-links">
+        <li><a href="mailto:first.last@example.edu">first.last@example.edu</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Elsewhere</p>
+      <ul class="foot-links">
+        <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=" rel="me">Google Scholar</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+    <p class="colophon">© 2026 Laboratoire SoMA</p>
+  </footer>
+
+</div>
+
+<script src="assets/js/theme.js" defer></script>
+</body>
+</html>

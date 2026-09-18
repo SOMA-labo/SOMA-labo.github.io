@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratoire SoMA — Scales of Microbial Architectonics</title>
+<meta name="description" content="Laboratoire SoMA — Scales of Microbial Architectonics. Minimal models of how microbial communities assemble, fluctuate and evolve, tested against experiments and sequencing data.">
+<meta name="color-scheme" content="light dark">
+
+<meta property="og:title" content="Laboratoire SoMA">
+<meta property="og:description" content="Scales of Microbial Architectonics — a quantitative ecology and evolution group.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soma-labo.github.io/">
+<!-- todo: add assets/img/og.jpg (1200x630) — a figure works well -->
+<meta property="og:image" content="assets/img/og.jpg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..600;1,400&display=swap" rel="stylesheet">
+<script>/* read the saved theme before first paint, to avoid a flash */try{var t=localStorage.getItem("soma-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <header class="site-head">
+    <a class="wordmark" href="index.html">
+      <!-- todo: when you have a logo, uncomment and drop the file in assets/img/
+      <img class="wordmark__mark" src="assets/img/logo.svg" alt="">
+      -->
+      <span class="wordmark__sub">Laboratoire</span>
+      <span class="wordmark__name">SoMA</span>
+    </a>
+    <div class="site-head__end">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" hidden
+              aria-label="Switch to the dark theme" aria-pressed="false">
+        <span class="theme-toggle__lamp" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================================================== opening ==== -->
+    <section class="opening">
+      <div class="opening__text">
+        <p class="label">Scales of Microbial Architectonics</p>
+        <h1 class="display">The architecture of microbial life, read across scales.</h1>
+        <p class="lede prose">
+          SoMA is a quantitative ecology and evolution group at
+          <span class="todo">[Institution, Department]</span>. We build minimal
+          models of how microbial communities assemble, fluctuate and evolve, and
+          we test them against experiments and large sequencing datasets.
+        </p>
+      </div>
+
+      <div class="opening__form" aria-hidden="true">
+        <!-- A balanced form: mass, void, and one warm light. -->
+        <svg class="sculpture" viewBox="0 0 320 430" role="presentation" focusable="false">
+          <defs>
+            <clipPath id="lantern">
+              <path d="M160 24c74 0 118 62 112 136-6 78-52 146-112 146S54 238 48 160C42 86 86 24 160 24Z"/>
+            </clipPath>
+            <radialGradient id="akari" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="currentColor" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- the mass -->
+          <path class="mass" d="M160 24c74 0 118 62 112 136-6 78-52 146-112 146S54 238 48 160C42 86 86 24 160 24Z"/>
+
+          <!-- ribbing, clipped to the mass -->
+          <g clip-path="url(#lantern)" class="hair">
+            <path d="M40 60H280M40 88H280M40 116H280M40 144H280M40 172H280M40 200H280M40 228H280M40 256H280M40 284H280"/>
+          </g>
+
+          <!-- the void: a cut through the form -->
+          <ellipse class="void" cx="160" cy="172" rx="27" ry="27"/>
+          <circle class="glow" cx="160" cy="172" r="7"/>
+          <circle class="glow" cx="160" cy="172" r="26" fill="url(#akari)"/>
+
+          <!-- the base, and a pebble resting beside it -->
+          <rect class="mass-2" x="104" y="312" width="112" height="9" rx="4.5"/>
+          <path class="mass-2" d="M214 372c22 0 40 12 40 27s-18 27-40 27-40-12-40-27 18-27 40-27Z"/>
+          <path class="hair" d="M48 348H272"/>
+        </svg>
+      </div>
+    </section>
+
+    <hr class="ribbing">
+
+    <!-- ======================================================= about ==== -->
+    <section class="band band--tight">
+      <div class="row">
+        <p class="label">The&nbsp;lab</p>
+        <div class="prose">
+          <p>
+            A gram of soil holds thousands of bacterial species, and no two grams
+            hold the same ones. Yet across environments, hosts and experiments,
+            the same statistical regularities keep appearing — in how abundances
+            are distributed, how they fluctuate through time, and how diversity
+            scales with the size of a community. We take these regularities as
+            the thing to be explained.
+          </p>
+          <p>
+            <em>Architectonics</em> is the word we use for that explanation: not a
+            catalogue of who lives where, but the structural rules that hold a
+            community together, and how those rules change as you move from a
+            single strain to a whole biome.
+          </p>
+          <p>
+            Our approach is deliberately minimal. We ask how far a model with
+            few parameters, often no more than stochastic growth with a carrying
+            capacity, can be pushed before it fails — and we treat the failures
+            as the interesting part, because that is where physiology, dormancy,
+            interactions and evolutionary history leave their signature. The work
+            sits between <strong>statistical physics</strong>,
+            <strong>community ecology</strong> and <strong>population
+            genetics</strong>, and it is equally happy with a pipette, a
+            time-series and a proof.
+          </p>
+          <p>
+            <a href="research.html">What we work on</a> &nbsp;·&nbsp;
+            <a href="publications.html">What we have published</a> &nbsp;·&nbsp;
+            <a href="join.html">How to join</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== news ==== -->
+    <section class="band band--rule" aria-labelledby="news-h">
+      <div class="row">
+        <p class="label" id="news-h">News</p>
+        <div>
+          <!-- todo: newest first; keep roughly the last 6–8 items and let the
+               rest fall off. The <time> value is machine-readable, the text
+               inside is what people see. -->
+          <ul class="news prose">
+            <li>
+              <time datetime="2026-02-24">Feb 2026</time>
+              <p>New preprint: <a href="https://doi.org/10.64898/2026.02.24.707719">Leveraging DNA and RNA oscillatory dynamics to investigate the ecology and physiology of a freshwater microbial community</a>.</p>
+            </li>
+            <li>
+              <time datetime="2026-02">Feb 2026</time>
+              <p><a href="https://doi.org/10.1073/pnas.2524274123">Evolutionary bioenergetics of sporulation</a> is out in <em>PNAS</em>, with Canan Karakoç and Jay Lennon.</p>
+            </li>
+            <li>
+              <time datetime="2026-01">2026</time>
+              <p><a href="https://doi.org/10.1128/msystems.01221-25">The macroecological dynamics of sojourn trajectories in the human gut microbiome</a> is published in <em>mSystems</em>.</p>
+            </li>
+            <li>
+              <time datetime="2025-12-19">Dec 2025</time>
+              <p>Preprint with Annamaria Bupu and Onofrio Mazzarisi on <a href="https://doi.org/10.64898/2025.12.19.695337">environmental filtering, competitive exclusion and alternative stable states</a>.</p>
+            </li>
+            <li>
+              <time datetime="2025-05">May 2025</time>
+              <p><a href="https://doi.org/10.1371/journal.pcbi.1013044">Macroecological patterns in experimental microbial communities</a> is out in <em>PLOS Computational Biology</em>.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== join ==== -->
+    <section class="band band--rule" aria-labelledby="open-h">
+      <div class="row">
+        <p class="label" id="open-h">Openings</p>
+        <div class="prose">
+          <p>
+            We are looking for students and postdocs who want to work at the
+            boundary between theory and data. Prior experience in physics,
+            mathematics, computer science or biology are all reasonable
+            starting points; curiosity about the others is the requirement.
+          </p>
+          <p><a href="join.html">Read more and get in touch →</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div>
+      <p class="label">Laboratoire SoMA</p>
+      <p>Scales of Microbial Architectonics<br>
+         <span class="todo">[Department]</span><br>
+         <span class="todo">[Institution]</span><br>
+         <span class="todo">[City, Country]</span></p>
+    </div>
+    <div>
+      <p class="label">Contact</p>
+      <ul class="foot-links">
+        <!-- todo: real address -->
+        <li><a href="mailto:first.last@example.edu">first.last@example.edu</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Elsewhere</p>
+      <ul class="foot-links">
+        <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=" rel="me">Google Scholar</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+    <p class="colophon">© 2026 Laboratoire SoMA</p>
+  </footer>
+
+</div>
+
+<script src="assets/js/theme.js" defer></script>
+</body>
+</html>
