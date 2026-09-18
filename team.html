@@ -84,9 +84,11 @@
 
       3. FACTS — the <ul class="person__facts"> under the name. One line each:
          degrees, previous posts, fellowships. Keep them short and in reverse
-         chronological order. Wrap a year or place in <span class="when"> to
-         grey it back. Delete the whole <ul> if you would rather just have the
-         sentence of prose.
+         chronological order. Each line is two cells: the date first, in a
+         <span class="when">, then everything else wrapped in a plain <span>.
+         Leave the date span empty for a line with no year and it still aligns.
+         Delete the whole <ul> if you would rather just have the sentence of
+         prose.
       ===================================================================
     -->
 
@@ -118,9 +120,9 @@
                 </h3>
                 <p class="label">Junior Professor Chair</p>
                 <ul class="person__facts">
-                  <li>Postdoc, ICTP Trieste <span class="person__flags" role="img" aria-label="Italy and the United Nations">🇮🇹 🇺🇳</span>, with Jacopo Grilli <span class="when">2021–2026</span></li>
-                  <li>PhD in Biology, Indiana University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span>, with Jay Lennon <span class="when">2020</span></li>
-                  <li>BSc, James Madison University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span></li>
+                  <li><span class="when">2021–2026</span><span>Postdoc, ICTP Trieste <span class="person__flags" role="img" aria-label="Italy and the United Nations">🇮🇹 🇺🇳</span>, with Jacopo Grilli</span></li>
+                  <li><span class="when">2020</span><span>PhD in Biology, Indiana University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span>, with Jay Lennon</span></li>
+                  <li><span class="when"></span><span>BSc, James Madison University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span></span></li>
                 </ul>
                 <p>
                   Will works on the macroecology and evolution of microbial
@@ -151,8 +153,8 @@
                   </h3>
                   <p class="label">Postdoctoral researcher</p>
                   <ul class="person__facts">
-                    <li>PhD in Physics, University FLAG <span class="when">20XX</span></li>
-                    <li>MSc in Ecology, University FLAG</li>
+                    <li><span class="when">20XX</span><span>PhD in Physics, University FLAG</span></li>
+                    <li><span class="when"></span><span>MSc in Ecology, University FLAG</span></li>
                   </ul>
                   <p>One or two sentences on what they work on here.</p>
                   <ul class="person__links">

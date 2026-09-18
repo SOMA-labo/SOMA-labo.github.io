@@ -66,6 +66,7 @@
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
   --page-x: clamp(1.5rem, 6vw, 5.5rem);
   --band: clamp(3.5rem, 9vh, 6.5rem);  /* vertical space between bands */
+  --aside: 13rem;            /* portraits and the plate under them */
 }
 
 /* The visitor's system setting, unless they have explicitly asked for light. */
@@ -613,8 +614,10 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   max-width: 42rem;
 }
 
-.pub h3 a { text-decoration: none; border-bottom: 1px solid var(--hair); }
-.pub h3 a:hover { color: var(--glow); border-bottom-color: var(--glow); }
+.pub h3 a,
+.entry h3 a { text-decoration: none; border-bottom: 1px solid var(--hair); }
+.pub h3 a:hover,
+.entry h3 a:hover { color: var(--glow); border-bottom-color: var(--glow); }
 
 .pub__authors {
   margin: 0 0 0.2rem;
@@ -685,7 +688,7 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 
 .person {
   display: grid;
-  grid-template-columns: 9rem minmax(0, 1fr);
+  grid-template-columns: var(--aside) minmax(0, 1fr);
   gap: clamp(1.25rem, 3vw, 2.25rem);
   align-items: start;
   padding: clamp(1.5rem, 4vh, 2.25rem) 0;
@@ -699,11 +702,17 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 }
 
 /* The left column of a person row. Usually just a portrait; it can also carry
-   a plate underneath, which is why it is a stack rather than a bare <img>. */
+   a plate underneath, which is why it is a stack rather than a bare <img>.
+
+   --aside is the single width both images obey. It is also a max-width here, so
+   that when the grid collapses to one column on a phone the stack keeps the same
+   size instead of stretching to the full screen. */
 .person__aside {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  width: 100%;
+  max-width: var(--aside);
 }
 
 /* A picture that belongs to a person rather than to the lab: same width as the
@@ -727,7 +736,6 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 /* Portraits stay small on purpose — a roster of faces, not a wall of them. */
 .person__portrait {
   width: 100%;
-  max-width: 9rem;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   background: var(--paper-sunk);
@@ -782,27 +790,29 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   padding: 0;
 }
 
+/* Dates sit in their own column on the left, so the years line up down the
+   list and the eye can read them as a spine — the same move as the news list
+   and the year labels on the publications page. A fact with no date simply
+   leaves that cell empty and still aligns. */
 .person__facts li {
-  position: relative;
-  padding-left: 0.95rem;
-  margin-bottom: 0.2rem;
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0 0.85rem;
+  margin-bottom: 0.25rem;
   font-size: 0.86rem;
   line-height: 1.45;
   color: var(--ink-soft);
 }
 
-.person__facts li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.68em;
-  width: 0.5em;
-  height: 1px;
-  background: var(--stone);
+.person__facts .when {
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
-/* A year or institution set off inside a fact. */
-.person__facts .when { color: var(--stone); }
+@media (max-width: 30rem) {
+  .person__facts li { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0 0.6rem; }
+}
 
 .person__links {
   display: flex;

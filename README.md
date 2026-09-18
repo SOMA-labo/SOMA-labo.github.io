@@ -149,13 +149,15 @@ facts list, newest first, one line each:
 
 ```html
 <ul class="person__facts">
-  <li>PhD in Physics, Sapienza <span class="when">2021</span></li>
-  <li>MSc in Ecology, Bologna</li>
+  <li><span class="when">2021</span><span>PhD in Physics, Sapienza</span></li>
+  <li><span class="when"></span><span>MSc in Ecology, Bologna</span></li>
 </ul>
 ```
 
-`<span class="when">` greys a year or place back. Delete the whole `<ul>` for
-anyone who should just have the sentence of prose.
+Each line is two cells: the date, then everything else. The dates sit in a
+column of their own on the left so they line up down the list. A line with no
+date keeps the empty `<span class="when"></span>` and still aligns. Delete the
+whole `<ul>` for anyone who should just have the sentence of prose.
 
 **Adding a figure.** In `research.html`, replace
 
