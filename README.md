@@ -76,22 +76,22 @@ with:
 grep -rn "todo" *.html
 ```
 
-The main ones:
+What is left:
 
-- **Institution, department, city** — in every page footer, plus the home page
-  opening and the contact page.
-- **Email address** — currently `first.last@example.edu`, in every footer and on
-  the contact and join pages.
-- **Google Scholar and ORCID URLs** — the `?user=` and `orcid.org/` links are
-  stubs.
-- **News items** on the home page.
-- **People** — the three member entries and the alumni line are templates.
-- **Teaching** — both entries are templates.
+- **Google Scholar URL** — the `?user=` link is still a stub, in every footer and
+  on the contact and team pages.
+- **Research figures** — four empty `.plate` slots in `research.html`.
+- **Teaching** — the course and workshop entries are templates.
 - **Join** — say whether postdoc positions are funded, and how PhD admissions
-  work at your institution.
+  work through the Paris-Saclay doctoral schools.
 - One flagged item at the bottom of `publications.html`: the *Micrococcus* strain
-  designation in the 2017 Genome Announcements entry was not on your personal
+  designation in the 2017 Genome Announcements entry was not on the personal
   site, so check it against the paper.
+- Optional: `assets/img/og.jpg` at 1200×630, for link previews on social sites.
+
+Already filled in: the affiliation and postal address, the email (written out as
+`[at]` / `[dot]` rather than linked, so harvesters have to work for it), ORCID,
+the map link, and the site URL in `og:url`.
 
 Delete the `<span class="todo">` wrapper (keep the text inside) as you go.
 
@@ -110,10 +110,13 @@ Code links you do not have. For a new year, copy a whole
 (`2026-02-24` or `2026-02`); the visible text can say whatever you like. Six to
 eight items is about right — let older ones fall off.
 
-**Adding a person.** Copy one `<li class="person">` in `team.html`. Three parts
-of the block are optional and can be deleted outright — the portrait, the flag,
-and the facts list. There is a long comment at the top of the file explaining
-each. For the portrait, replace
+**Adding a person.** `team.html` renders one list, in rank order, with the PI
+first and no other distinction. Two ready-made blocks sit in an HTML comment
+below the list — copy one out, paste it into the `<ul class="roster">` where the
+person belongs, and edit it. The Alumni section is in a comment too; uncomment it
+when there are alumni. Three parts of a person block are optional and can be
+deleted outright — the portrait, the flags, and the facts list. For the portrait,
+replace
 
 ```html
 <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
@@ -128,16 +131,18 @@ with
 Photos are cropped to 4:5 and desaturated slightly, so a set taken in different
 places still sits together. 600×750px or larger is plenty.
 
-For a country-of-origin flag next to the name:
+Flags go in two places, both using the same span:
 
 ```html
 <span class="person__flags" role="img" aria-label="Italy">🇮🇹</span>
 ```
 
-Put two flags in the same span, separated by a space, and name both countries in
-the `aria-label` — a screen reader announces a bare flag emoji as two letters or
-not at all. Copy flags from [emojipedia.org/flags](https://emojipedia.org/flags).
-Worth letting people opt in rather than assigning one.
+Next to the **name**, for where the person is from, and after each **institution**
+in the facts list, for where that institution is. Put two flags in one span
+separated by a space, and name both countries in the `aria-label` — a screen
+reader announces a bare flag emoji as two letters or not at all. Copy flags from
+[emojipedia.org/flags](https://emojipedia.org/flags). Worth letting people pick
+their own rather than assigning one.
 
 For the lines under a name — degrees, previous posts, fellowships — use the
 facts list, newest first, one line each:

@@ -1,5 +1,11 @@
+# macOS
 .DS_Store
 Thumbs.db
+
+# editors
 *.swp
 .idea/
 .vscode/
+
+# files delivered into this folder from a chat, not part of the site
+Claude outputs/

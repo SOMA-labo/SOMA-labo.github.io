@@ -415,6 +415,8 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   gap: 0.35rem;
 }
 
+.foot-links li { font-size: 0.95rem; color: var(--ink-soft); }
+
 .foot-links a {
   font-size: 0.95rem;
   text-decoration: none;
@@ -696,6 +698,32 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   .person { grid-template-columns: 1fr; gap: 0.9rem; }
 }
 
+/* The left column of a person row. Usually just a portrait; it can also carry
+   a plate underneath, which is why it is a stack rather than a bare <img>. */
+.person__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* A picture that belongs to a person rather than to the lab: same width as the
+   portrait, its own caption, no desaturation — the work keeps its own tone. */
+.person__plate { margin: 0; }
+
+.person__plate img {
+  width: 100%;
+  border: 1px solid var(--hair);
+  background: var(--paper-sunk);
+}
+
+.person__plate figcaption {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  color: var(--stone);
+  margin-top: 0.45rem;
+}
+
 /* Portraits stay small on purpose — a roster of faces, not a wall of them. */
 .person__portrait {
   width: 100%;
@@ -741,6 +769,10 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
                "Twemoji Mozilla", sans-serif;
 }
+
+/* A flag inside a facts line marks where that institution is. Bumped back up
+   because the facts list is already small type. */
+.person__facts .person__flags { font-size: 0.95em; }
 
 /* Optional facts under the name: degrees, previous posts, one line each.
    Hairline dashes rather than bullets, to match the prose lists. */
@@ -791,6 +823,16 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 }
 .person__links a:hover { color: var(--glow); border-bottom-color: var(--glow); }
 
+/* Written-out address: sits with the links but stays lower case, since an
+   email set in caps is unreadable. */
+.person__email {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--stone);
+  margin: 0.5rem 0 0;
+  max-width: none;
+}
+
 /* Alumni: a plain list, not a grid of faces. */
 .alumni { list-style: none; margin: 0; padding: 0; max-width: 44rem; }
 .alumni li {
@@ -830,20 +872,22 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 .track h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.4rem; }
 .track p { font-size: 0.95rem; max-width: none; color: var(--ink-soft); }
 
+/* Three columns at desktop width: post, visiting, online. The minimum is set
+   so all three fit the content column rather than wrapping to two and leaving
+   the third stranded under the address. */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: clamp(1.75rem, 5vw, 3.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
   max-width: 56rem;
 }
 
+/* The address is written out rather than linked, so this is a span: no
+   underline, nothing that looks clickable when it is not. */
 .mailto {
   font-size: clamp(1.1rem, 1rem + 0.7vw, 1.5rem);
-  text-decoration: none;
-  border-bottom: 1px solid var(--glow);
-  padding-bottom: 0.1em;
+  letter-spacing: -0.012em;
 }
-.mailto:hover { color: var(--glow); }
 
 /* Anything still to be filled in. Search the source for "todo" to find them. */
 .todo {

@@ -102,18 +102,25 @@
           <ul class="roster">
 
             <li class="person">
-              <!-- todo: assets/img/people/shoemaker.jpg -->
-              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+              <div class="person__aside">
+                <img class="person__portrait" src="assets/img/people/shoemaker.jpg"
+                     alt="William R. Shoemaker, lecturing at a blackboard">
+                <figure class="person__plate">
+                  <img src="assets/img/soulages-malerei-15-1957.jpg"
+                       alt="Pierre Soulages, Malerei 15, 1957 — broad black strokes crossing a pale ground">
+                  <figcaption>Pierre Soulages, <em>Malerei 15</em>, 1957. © ADAGP, Paris.</figcaption>
+                </figure>
+              </div>
               <div>
                 <h3 class="person__name">
                   William R. Shoemaker
                   <span class="person__flags" role="img" aria-label="United States">🇺🇸</span>
                 </h3>
-                <p class="label">Principal investigator</p>
+                <p class="label">Junior Professor Chair</p>
                 <ul class="person__facts">
-                  <li>Postdoc, ICTP Trieste, with Jacopo Grilli <span class="when">2021–2026</span></li>
-                  <li>PhD in Biology, Indiana University, with Jay Lennon <span class="when">2020</span></li>
-                  <li>BSc, James Madison University</li>
+                  <li>Postdoc, ICTP Trieste <span class="person__flags" role="img" aria-label="Italy and the United Nations">🇮🇹 🇺🇳</span>, with Jacopo Grilli <span class="when">2021–2026</span></li>
+                  <li>PhD in Biology, Indiana University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span>, with Jay Lennon <span class="when">2020</span></li>
+                  <li>BSc, James Madison University <span class="person__flags" role="img" aria-label="United States">🇺🇸</span></li>
                 </ul>
                 <p>
                   Will works on the macroecology and evolution of microbial
@@ -123,62 +130,59 @@
                 <ul class="person__links">
                   <li><a href="https://wrshoemaker.github.io/">Personal site</a></li>
                   <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
-                  <li><a href="https://scholar.google.com/citations?user=">Scholar</a></li>
-                  <li><a href="https://orcid.org/">ORCID</a></li>
-                  <li><a href="mailto:first.last@example.edu">Email</a></li>
+                  <li><a href="https://scholar.google.com/citations?user=92HwU5EAAAAJ">Scholar</a></li>
+                  <li><a href="https://orcid.org/0000-0003-0111-4838">ORCID</a></li>
                 </ul>
+                <p class="person__email">williamrshoemaker[at]gmail[dot]com</p>
               </div>
             </li>
 
-            <!-- Full example: portrait, flag, facts, prose, links. -->
-            <li class="person">
-              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
-              <div>
-                <h3 class="person__name">
-                  <span class="todo">Name</span>
-                  <span class="person__flags" role="img" aria-label="Italy">🇮🇹</span>
-                </h3>
-                <p class="label">Postdoctoral researcher</p>
-                <ul class="person__facts">
-                  <li>PhD in Physics, <span class="todo">University</span> <span class="when">20XX</span></li>
-                  <li>MSc in <span class="todo">Subject</span>, <span class="todo">University</span></li>
-                </ul>
-                <p>One or two sentences on what they work on here.</p>
-                <ul class="person__links">
-                  <li><a href="#">Site</a></li>
-                  <li><a href="#">Scholar</a></li>
-                </ul>
-              </div>
-            </li>
+            <!--
+              TEMPLATE. Copy one block out of this comment, paste it above
+              (inside the <ul class="roster">), and edit it. Nothing inside a
+              comment renders, so these sit here harmlessly until needed.
 
-            <!-- Two countries. -->
-            <li class="person">
-              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
-              <div>
-                <h3 class="person__name">
-                  <span class="todo">Name</span>
-                  <span class="person__flags" role="img" aria-label="France and Vietnam">🇫🇷 🇻🇳</span>
-                </h3>
-                <p class="label">PhD student</p>
-                <ul class="person__facts">
-                  <li>MSc in Ecology, <span class="todo">University</span> <span class="when">20XX</span></li>
-                </ul>
-                <p>One or two sentences on what they work on here.</p>
-                <ul class="person__links">
-                  <li><a href="#">Site</a></li>
-                </ul>
-              </div>
-            </li>
+              <li class="person">
+                <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+                <div>
+                  <h3 class="person__name">
+                    Full Name
+                    <span class="person__flags" role="img" aria-label="Italy">FLAG</span>
+                  </h3>
+                  <p class="label">Postdoctoral researcher</p>
+                  <ul class="person__facts">
+                    <li>PhD in Physics, University FLAG <span class="when">20XX</span></li>
+                    <li>MSc in Ecology, University FLAG</li>
+                  </ul>
+                  <p>One or two sentences on what they work on here.</p>
+                  <ul class="person__links">
+                    <li><a href="#">Site</a></li>
+                    <li><a href="#">Scholar</a></li>
+                  </ul>
+                </div>
+              </li>
 
-            <!-- Minimal: no flag, no facts. Both are optional. -->
-            <li class="person">
-              <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
-              <div>
-                <h3 class="person__name"><span class="todo">Name</span></h3>
-                <p class="label">Master's student</p>
-                <p>One or two sentences on what they work on here.</p>
-              </div>
-            </li>
+              Shortest possible version, with no photo, no flag and no facts:
+
+              <li class="person">
+                <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+                <div>
+                  <h3 class="person__name">Full Name</h3>
+                  <p class="label">Master's student</p>
+                  <p>One or two sentences on what they work on here.</p>
+                </div>
+              </li>
+
+              FLAG stands in for a flag span. Two places take one: next to the
+              person's name, for where they are from, and after each institution
+              in the facts list, for where that institution is. Both look like
+
+                <span class="person__flags" role="img" aria-label="Italy">[flag emoji]</span>
+
+              Copy real flag emoji from emojipedia.org/flags. The aria-label is
+              what a screen reader reads out, so name the country in words there.
+              Delete any span you do not want; none of them is required.
+            -->
 
           </ul>
 
@@ -190,18 +194,22 @@
       </div>
     </section>
 
-    <!-- ===================================================== alumni ==== -->
+    <!-- ===================================================== alumni ====
+         Nothing renders here yet. When the first person leaves, uncomment the
+         section below and add a line per person. Flags work here too.
+
     <section class="band band--rule">
       <div class="row">
         <p class="label">Alumni</p>
         <div>
-          <!-- Flags work here too, same markup, if you want them. -->
           <ul class="alumni">
-            <li><span class="todo">Name</span> — <span>Master's student, 20XX–20XX · now at somewhere</span></li>
+            <li>Full Name &mdash; <span>Master&rsquo;s student, 20XX&ndash;20XX &middot; now at somewhere</span></li>
           </ul>
         </div>
       </div>
     </section>
+
+    -->
 
     <!-- =============================================== collaborators ==== -->
     <section class="band band--rule">
@@ -224,23 +232,23 @@
     <div>
       <p class="label">Laboratoire SoMA</p>
       <p>Scales of Microbial Architectonics<br>
-         <span class="todo">[Department]</span><br>
-         <span class="todo">[Institution]</span><br>
-         <span class="todo">[City, Country]</span></p>
+         Génomique Métabolique, Genoscope<br>
+         Institut François Jacob, CEA<br>
+         Évry-Courcouronnes, France</p>
     </div>
     <div>
       <p class="label">Contact</p>
       <ul class="foot-links">
-        <li><a href="mailto:first.last@example.edu">first.last@example.edu</a></li>
+        <li>williamrshoemaker[at]gmail[dot]com</li>
         <li><a href="contact.html">Contact page</a></li>
       </ul>
     </div>
     <div>
       <p class="label">Elsewhere</p>
       <ul class="foot-links">
-        <li><a href="https://github.com/wrshoemaker">GitHub</a></li>
-        <li><a href="https://scholar.google.com/citations?user=" rel="me">Google Scholar</a></li>
-        <li><a href="https://orcid.org/">ORCID</a></li>
+        <li><a href="https://github.com/SOMA-labo">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=92HwU5EAAAAJ" rel="me">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0000-0003-0111-4838">ORCID</a></li>
       </ul>
     </div>
     <p class="colophon">© 2026 Laboratoire SoMA</p>
