@@ -46,7 +46,7 @@
   <main id="main">
 
     <section class="band band--tight">
-      <h1 class="display display--wide">Four questions, one set of tools.</h1>
+      <h1 class="display display--wide">Three questions, one set of tools.</h1>
       <p class="lede prose" style="margin-top:1.5rem">
         Everything below rests on the same bet: that the statistical behaviour of
         a microbial community can be captured by models with very few moving
@@ -80,9 +80,12 @@
               <a href="https://doi.org/10.1111/1462-2920.70314">a survey and outlook</a>.
             </p>
 
-            <!-- todo: swap in a real figure. Keep the figure ~1600px wide. -->
-            <figure class="plate plate--empty">
-              <figcaption><span class="todo">assets/img/research-01.jpg</span> — e.g. the abundance fluctuation distribution collapsing across environments.</figcaption>
+            <figure class="plate">
+              <img src="assets/img/research-01.webp"
+                   alt="Three-panel schematic. Top: a phylogeny is cut at coarser and coarser scales, the taxa in each bin are counted, and the resulting abundance distributions are compared. Middle: an abundance time series fluctuating about a steady state, with the typical duration of an excursion measured and its distribution compared against static and dynamic predictions. Bottom: demographic and environmental noise scale differently with abundance, and model inference assigns each species to one or the other.">
+              <figcaption>Three ways of asking the same question. How abundance distributions change as taxa are
+                coarse-grained up a phylogeny; how long a typical fluctuation lasts; and whether the noise driving
+                those fluctuations is demographic or environmental.</figcaption>
             </figure>
           </div>
         </div>
@@ -109,8 +112,12 @@
               <a href="https://doi.org/10.64898/2025.12.19.695337">preprint 2025</a>.
             </p>
 
-            <figure class="plate plate--empty plate--offset">
-              <figcaption><span class="todo">assets/img/research-02.jpg</span> — e.g. replicate communities converging on alternative states.</figcaption>
+            <figure class="plate plate--offset">
+              <img src="assets/img/research-02.webp"
+                   alt="An environmental sample seeds a progenitor community, which is split into two experimental regimes: one with migration and periodic perturbation between replicate tubes, one without. The resulting communities are compared through Taylor's law — variance of abundance against mean abundance on log axes — where the two regimes give different scaling exponents, roughly 1.8 without migration and 1.5 with it.">
+              <figcaption>Ecological processes leave macroecological signatures. Replicate communities propagated
+                with and without migration separate cleanly under Taylor's law, the scaling of abundance variance
+                with mean.</figcaption>
             </figure>
           </div>
         </div>
@@ -138,14 +145,21 @@
               <a href="https://doi.org/10.1111/eva.12557">Evol. Appl. 2018</a>.
             </p>
 
-            <figure class="plate plate--empty">
-              <figcaption><span class="todo">assets/img/research-03.jpg</span> — e.g. the seed-bank effect on the site frequency spectrum.</figcaption>
+            <figure class="plate">
+              <img src="assets/img/research-03.webp"
+                   alt="Four-panel schematic of how a dormant life history changes microbial biology. Demography: cells sporulate and germinate, and populations that can form spores persist at higher numbers than those that cannot once resources run out. Evolution: mutations accumulate more slowly the longer resources are withheld, and spore-forming populations retain more genetic diversity than non-spore-forming ones. Predation: phage cannot productively infect spores, which synchronises phage-host oscillations. Bioenergetics: the spore life cycle costs a few per cent of a cell's ATP budget, and the fraction of the population that sporulates falls as that cost rises.">
+              <figcaption>What dormancy changes. Populations persist without resources, spores preserve genetic
+                diversity that active cells would lose, phage cannot infect a spore, and the whole strategy is paid
+                for out of a cell's ATP budget.</figcaption>
             </figure>
           </div>
         </div>
       </article>
 
-      <!-- ================================================== strand 4 ==== -->
+      <!-- ================================================== strand 4 ====
+           Parked. Delete the comment markers around this article to bring
+           the "Evolution in situ" strand back.
+
       <article class="strand">
         <div class="row">
           <p class="label label--num">04 / Evolution in situ</p>
@@ -172,6 +186,8 @@
           </div>
         </div>
       </article>
+
+      -->
 
     </section>
 

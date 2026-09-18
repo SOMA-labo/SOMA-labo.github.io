@@ -80,7 +80,6 @@ What is left:
 
 - **Google Scholar URL** — the `?user=` link is still a stub, in every footer and
   on the contact and team pages.
-- **Research figures** — four empty `.plate` slots in `research.html`.
 - **Teaching** — the course and workshop entries are templates.
 - **Join** — say whether postdoc positions are funded, and how PhD admissions
   work through the Paris-Saclay doctoral schools.
@@ -171,12 +170,15 @@ with
 
 ```html
 <figure class="plate">
-  <img src="assets/img/research-01.jpg" alt="Describe what the figure shows">
+  <img src="assets/img/research-03.webp" alt="Describe what the figure shows">
   <figcaption>A sentence of caption.</figcaption>
 </figure>
 ```
 
-Note the `plate--empty` class comes off. Export figures around 1600px wide.
+Note the `plate--empty` class comes off. Export figures about 1400px wide — twice
+the width they are displayed at, so they stay sharp on a retina screen. The two
+existing figures are lossless WebP, which is roughly half the size of the same
+PNG; any common format works in an `<img>`, so PNG or JPEG is fine too.
 `plate--offset` indents a figure on wide screens — it is used on alternating
 strands to keep the page from settling into a column; keep that alternation if
 you add more.

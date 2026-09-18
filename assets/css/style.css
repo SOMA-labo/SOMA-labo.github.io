@@ -751,7 +751,15 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 }
 
 .person h3 { font-size: 1.05rem; font-weight: 500; margin: 0 0 0.1rem; letter-spacing: 0; }
-.person .label { margin-bottom: 0.45rem; }
+/* The role line under a name carries a title, an institution and a place, which
+   is too much text for the letterspaced caps of a wall label. Sentence case,
+   near-normal tracking — still quiet, but it reads as a line rather than shouts. */
+.person .label {
+  margin-bottom: 0.45rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.78rem;
+}
 /* Capped so a person's blurb wraps at the same measure as the rest of the site. */
 .person p { font-size: 0.93rem; margin: 0 0 0.5rem; color: var(--ink-soft); max-width: 32rem; }
 
