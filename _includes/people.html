@@ -1,0 +1,68 @@
+{%- comment -%}
+  The Members list on the Team page: one entry per file in _people/, in
+  filename order (01-..., 02-...). Then the footnote from the page's
+  `members_note`. See _people/README.md for the fields.
+{%- endcomment -%}
+{%- assign people = site.people | sort: "path" -%}
+<!-- wide -->
+<ul class="roster">
+{%- for person in people %}
+{%- unless person.hidden %}
+
+  <li class="person">
+    <div class="person__aside">
+      {%- if person.portrait %}
+      <img class="person__portrait" src="{{ person.portrait }}"
+           alt="{{ person.portrait_alt | default: person.name | escape }}">
+      {%- else %}
+      <span class="person__portrait person__portrait--empty" aria-hidden="true"></span>
+      {%- endif %}
+      {%- if person.plate %}
+      <figure class="person__plate">
+        <img src="{{ person.plate.src }}"
+             alt="{{ person.plate.alt | escape }}">
+        <figcaption>{{ person.plate.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>
+      </figure>
+      {%- endif %}
+    </div>
+    <div>
+      <h3 class="person__name">
+        {{ person.name }}
+        {% include flags.html codes=person.flags %}
+      </h3>
+      {%- if person.role %}
+      <p class="label">{{ person.role | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if person.role_flags %} {% include flags.html codes=person.role_flags %}{% endif %}</p>
+      {%- endif %}
+      {%- if person.facts %}
+      <ul class="person__facts">
+        {%- for f in person.facts %}
+        <li><span class="when">{{ f.when }}</span><span>{{ f.what | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if f.flags %} {% include flags.html codes=f.flags %}{% endif %}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- assign bio = person.content | markdownify | strip -%}
+      {%- if bio != "" %}
+      {{ bio }}
+      {%- endif %}
+      {%- if person.links %}
+      <ul class="person__links">
+        {%- for l in person.links %}
+        <li><a href="{{ l.url }}">{{ l.title }}</a></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- if person.email %}
+      <p class="person__email">{{ person.email }}</p>
+      {%- endif %}
+    </div>
+  </li>
+{%- endunless %}
+{%- endfor %}
+
+</ul>
+{%- if page.members_note %}
+
+<p class="footnote">
+  {{ page.members_note | markdownify | remove: "<p>" | remove: "</p>" | strip | replace: "<a href", '<a class="link" href' }}
+</p>
+{%- endif %}

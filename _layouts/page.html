@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{%- comment -%}
+  An ordinary page: a large title, an optional lede paragraph, the ribbed
+  divider, then the page's own content. Each "## Heading" in the page's
+  Markdown becomes one section, with the heading as its label in the left
+  column. See _includes/sections.html.
+{%- endcomment -%}
+
+    <section class="band band--tight">
+      <h1 class="display display--wide">{{ page.heading | default: page.title }}</h1>
+      {%- if page.lede %}
+      <p class="lede prose" style="margin-top:1.4rem">
+        {{ page.lede | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+      </p>
+      {%- endif %}
+      <hr class="ribbing">
+    </section>
+
+{% include sections.html html=content %}

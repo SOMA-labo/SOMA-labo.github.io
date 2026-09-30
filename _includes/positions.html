@@ -1,0 +1,25 @@
+{%- comment -%}
+  The positions on the Join page, from `positions` in join.md's front
+  matter, followed by `positions_note`.
+{%- endcomment -%}
+<!-- wide -->
+<ul class="tracks">
+{%- for t in page.positions %}
+{%- unless t.hidden %}
+
+  <li class="track">
+    <h3>{{ t.title | escape }}</h3>
+    <p>
+      {{ t.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+    </p>
+  </li>
+{%- endunless %}
+{%- endfor %}
+
+</ul>
+{%- if page.positions_note %}
+
+<p class="footnote">
+  {{ page.positions_note | markdownify | remove: "<p>" | remove: "</p>" | strip | replace: "<a href", '<a class="link" href' }}
+</p>
+{%- endif %}

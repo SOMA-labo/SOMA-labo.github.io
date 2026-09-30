@@ -1,0 +1,25 @@
+{%- comment -%}
+  The news list on the home page. Items come from _data/news.yml, in the
+  order they are written there (newest first). Dates with a month show as
+  "Aug 2026"; a bare year shows as "2026".
+{%- endcomment -%}
+{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+<!-- wide -->
+<ul class="news prose">
+{%- for item in site.data.news %}
+{%- unless item.hidden %}
+{%- assign d = item.date | append: "" -%}
+{%- assign parts = d | split: "-" -%}
+{%- if parts.size > 1 -%}
+  {%- assign m = parts[1] | plus: 0 | minus: 1 -%}
+  {%- capture shown %}{{ months[m] }} {{ parts[0] }}{% endcapture -%}
+{%- else -%}
+  {%- assign shown = parts[0] -%}
+{%- endif %}
+  <li>
+    <time datetime="{{ d }}">{{ shown }}</time>
+    {{ item.text | markdownify | strip }}
+  </li>
+{%- endunless %}
+{%- endfor %}
+</ul>

@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------------------
+# WORKSHOPS & SCHOOLS — the second list on the Teaching page. Newest first.
+# Same fields as _data/courses.yml.
+# ---------------------------------------------------------------------------
+
+- when: "2025 · ICTP, Trieste, Italy"
+  title: "Exploring metabolic cross-feeding in a synthetic *Pseudomonas* consortium"
+  text: "Co-organiser and co-instructor. ICTP Hands-on School in Quantitative Biology."
+
+- when: "2024 · University of Havana, Cuba"
+  title: "Microbial coexistence in a chemostat setting"
+  url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/cuba_notes.pdf
+  text: "Co-organiser and co-instructor. Hands-on Quantitative Biology School."
+  links:
+    - title: Notes (PDF)
+      url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/cuba_notes.pdf
+
+- when: "2024 · Milan, Italy"
+  title: "Evolution in an ecological context"
+  url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/IICII_notes.pdf
+  text: "Co-instructor. IICII Summer School in Quantitative Biology (ICTP–ICGEB, Institut Curie and IFOM)."
+  links:
+    - title: Notes (PDF)
+      url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/IICII_notes.pdf
+
+- when: "2023 · ICTP, Trieste, Italy"
+  title: "Tutorial on ecological dynamics"
+  url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/consumer_resource_notes.pdf
+  text: "Co-instructor. Advanced School on Quantitative Principles in Microbial Physiology: from Single Cells to Cell Communities."
+  links:
+    - title: Notes (PDF)
+      url: https://github.com/wrshoemaker/wrshoemaker.github.io/blob/master/files/consumer_resource_notes.pdf

@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# FLAGS — the countries the Team page knows how to show.
+#
+# In a person's file you write codes, e.g.  flags: [IT, UN]
+# and the page shows the flags and tells screen readers the country names
+# ("Italy and the United Nations"). To use a country not listed here, add a
+# line: its two-letter code, the flag emoji, and its name. Copy flag emoji
+# from https://emojipedia.org/flags
+# ---------------------------------------------------------------------------
+
+BR: { flag: "🇧🇷", name: "Brazil" }
+CA: { flag: "🇨🇦", name: "Canada" }
+CH: { flag: "🇨🇭", name: "Switzerland" }
+CN: { flag: "🇨🇳", name: "China" }
+CU: { flag: "🇨🇺", name: "Cuba" }
+DE: { flag: "🇩🇪", name: "Germany" }
+ES: { flag: "🇪🇸", name: "Spain" }
+EU: { flag: "🇪🇺", name: "the European Union" }
+FR: { flag: "🇫🇷", name: "France" }
+GB: { flag: "🇬🇧", name: "the United Kingdom" }
+IN: { flag: "🇮🇳", name: "India" }
+IT: { flag: "🇮🇹", name: "Italy" }
+JP: { flag: "🇯🇵", name: "Japan" }
+MX: { flag: "🇲🇽", name: "Mexico" }
+NL: { flag: "🇳🇱", name: "the Netherlands" }
+PT: { flag: "🇵🇹", name: "Portugal" }
+SI: { flag: "🇸🇮", name: "Slovenia" }
+UN: { flag: "🇺🇳", name: "the United Nations" }
+US: { flag: "🇺🇸", name: "United States" }

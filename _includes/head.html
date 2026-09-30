@@ -1,0 +1,27 @@
+{%- assign root = page.root | default: "" -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }} — {{ site.title }}{% endif %}</title>
+{%- if page.description %}
+<meta name="description" content="{{ page.description | strip | escape }}">
+{%- endif %}
+{%- if page.noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<meta name="color-scheme" content="light dark">
+{%- if page.og %}
+
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.subtitle }} — a quantitative ecology and evolution group.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}/">
+<!-- add assets/img/og.jpg (1200x630) for link previews — a figure works well -->
+<meta property="og:image" content="assets/img/og.jpg">
+{%- endif %}
+
+<link rel="icon" href="{{ root }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..600;1,400&display=swap" rel="stylesheet">
+<script>/* read the saved theme before first paint, to avoid a flash */try{var t=localStorage.getItem("soma-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="{{ root }}assets/css/style.css">

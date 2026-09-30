@@ -1,0 +1,92 @@
+# ---------------------------------------------------------------------------
+# Laboratoire SoMA — site settings
+#
+# GitHub Pages builds this site with Jekyll every time you push. You should
+# rarely need to touch this file; the content lives in the .md pages, in
+# _data/, _people/ and _strands/. See README.md for where everything is.
+#
+# Changes to this file only take effect on the next build (i.e. the next push,
+# or restarting `jekyll serve` if you preview locally).
+# ---------------------------------------------------------------------------
+
+title: Laboratoire SoMA
+subtitle: Scales of Microbial Architectonics
+url: https://soma-labo.github.io
+
+# Shown in the footer of every page, and on the contact page.
+email: williamrshoemaker[at]gmail[dot]com
+address:
+  - Scales of Microbial Architectonics
+  - Génomique Métabolique, Genoscope
+  - Institut François Jacob, CEA
+  - Évry-Courcouronnes, France
+elsewhere:
+  - title: GitHub
+    url: https://github.com/SOMA-labo
+  - title: Google Scholar
+    url: https://scholar.google.com/citations?user=92HwU5EAAAAJ
+    rel: me
+  - title: ORCID
+    url: https://orcid.org/0000-0003-0111-4838
+copyright: © 2026 Laboratoire SoMA
+
+# The navigation bar, in order. `file` is the page's output file.
+nav:
+  - title: Home
+    file: index.html
+  - title: Research
+    file: research.html
+  - title: Publications
+    file: publications.html
+  - title: Team
+    file: team.html
+  - title: Teaching
+    file: teaching.html
+  - title: Join
+    file: join.html
+  - title: Contact
+    file: contact.html
+
+# Lab members are picked out in bold on the publications page. List every
+# spelling of each member's name exactly as it appears in author lists.
+lab_members:
+  - Shoemaker, W.R.
+  - W.R. Shoemaker
+
+# Papers from before this year are grouped together under one heading.
+publications_first_full_year: 2017
+
+# ---------------------------------------------------------------------------
+# Plumbing. Everything below matches what GitHub Pages uses, so a local
+# preview renders exactly like the live site.
+# ---------------------------------------------------------------------------
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  # Straight quotes, as typed. Change to [lsquo, rsquo, ldquo, rdquo] for
+  # curly typographic quotes everywhere.
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+collections:
+  people:
+    output: false
+  strands:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - Claude outputs

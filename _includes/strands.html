@@ -1,0 +1,29 @@
+{%- comment -%}
+  The research strands: one per file in _strands/, in filename order. Every
+  second figure is indented on wide screens (plate--offset) so the page does
+  not settle into a single column; that alternation is automatic.
+{%- endcomment -%}
+{%- assign strands = site.strands | sort: "path" | where_exp: "s", "s.hidden != true" -%}
+<section class="band band--tight">
+{%- for s in strands %}
+
+  <article class="strand">
+    <div class="row">
+      <p class="label label--num">{{ s.label }}</p>
+      <div class="strand__body prose">
+        <h2>{{ s.title }}</h2>
+        {{ s.content | markdownify | strip }}
+        {%- if s.figure %}
+
+        <figure class="plate{% cycle '', ' plate--offset' %}">
+          <img src="{{ s.figure }}"
+               alt="{{ s.alt | strip | escape }}">
+          <figcaption>{{ s.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>
+        </figure>
+        {%- endif %}
+      </div>
+    </div>
+  </article>
+{%- endfor %}
+
+</section>

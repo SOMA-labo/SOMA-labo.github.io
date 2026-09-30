@@ -1,0 +1,53 @@
+# ---------------------------------------------------------------------------
+# NEWS — shown on the home page, in the order written here. Newest first.
+#
+# Each item is:
+#
+#   - date: 2026-08-03        a year (2026), a month (2026-08) or a day
+#                             (2026-08-03). A year shows as "2026"; anything
+#                             more precise shows as "Aug 2026".
+#     text: "..."             one line of Markdown. *Italics*, [links](url).
+#
+# Start talks, press and outreach with *Talk.*, *Press.* or *Outreach.* so
+# they read differently from papers. Keep roughly the last dozen items; the
+# publications page has the full list of papers. Add `hidden: true` to keep
+# an item here without showing it.
+#
+# Put the text in "double quotes" if it contains a colon followed by a space.
+# ---------------------------------------------------------------------------
+
+- date: 2026
+  text: "*Talk.* Physiological signals in natural microbial communities. EPCP, online."
+
+- date: 2026
+  text: "*Talk.* Physiological signals in microbial communities, and some methodological considerations. INTP, Surba, France."
+
+- date: 2026
+  text: "*Talk.* Investigating the macroecology of sojourn trajectories in the human gut microbiome. ICBP, Genoa, Italy."
+
+- date: 2026
+  text: "*Talk.* Macroecological insights into microbial communities via minimal models. Department of Biology, Johns Hopkins University, Baltimore, Maryland, USA."
+
+- date: 2026
+  text: "*Talk.* Investigating the macroecology of sojourn trajectories in the human gut microbiome. APS Global Physics Summit, Denver, Colorado, USA."
+
+- date: 2026-08-03
+  text: "*Press.* [Sopravvivere in condizioni estreme: l'economia segreta dei batteri](https://www.ilnordest.it/ambiente/batteri-energia-sopravvivenza-studio-ictp-william-shoemaker-ykg2wfjp) — surviving in extreme conditions, the secret economy of bacteria. *il Nord Est*."
+
+- date: 2026
+  text: "*Outreach.* Guest lecture, AP Physics 2, John Champe High School, Aldie, Virginia, USA."
+
+- date: 2026
+  text: "[An Interpretation, Survey, and Outlook on Microbial Macroecology](https://doi.org/10.1111/1462-2920.70314) is out in *Environmental Microbiology*."
+
+- date: 2026-02-24
+  text: "New preprint: [Leveraging DNA and RNA oscillatory dynamics to investigate the ecology and physiology of a freshwater microbial community](https://doi.org/10.64898/2026.02.24.707719)."
+
+- date: 2026-02
+  text: "[Evolutionary bioenergetics of sporulation](https://doi.org/10.1073/pnas.2524274123) is out in *PNAS*, with Canan Karakoç and Jay Lennon."
+
+- date: 2026
+  text: "[The macroecological dynamics of sojourn trajectories in the human gut microbiome](https://doi.org/10.1128/msystems.01221-25) is published in *mSystems*."
+
+- date: 2025-06-16
+  text: "*Press.* Interviewed by Gabriel Popkin for [The ecosystem dynamics that can make or break an invasion](https://www.quantamagazine.org/the-ecosystem-dynamics-that-can-make-or-break-an-invasion-20250616/), *Quanta Magazine*."

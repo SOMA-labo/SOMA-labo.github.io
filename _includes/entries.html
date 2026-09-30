@@ -1,0 +1,28 @@
+{%- comment -%}
+  A list of courses or workshops on the Teaching page.
+  Usage: {% include entries.html items=site.data.courses %}
+  Fields are described at the top of _data/courses.yml.
+{%- endcomment -%}
+<!-- wide -->
+<ul class="entries">
+{%- for e in include.items %}
+{%- unless e.hidden %}
+
+  <li class="entry">
+    <p class="label label--num">{{ e.when }}</p>
+    <h3>{% if e.url %}<a href="{{ e.url }}">{% endif %}{{ e.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if e.url %}</a>{% endif %}</h3>
+    {%- if e.text %}
+    <p>{{ e.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    {%- endif %}
+    {%- if e.links %}
+    <ul class="pub__links">
+      {%- for l in e.links %}
+      <li><a href="{{ l.url }}">{{ l.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+{%- endunless %}
+{%- endfor %}
+
+</ul>

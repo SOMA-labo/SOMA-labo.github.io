@@ -1,0 +1,15 @@
+{%- comment -%}
+  Outputs an "## Alumni" section, but only once _data/alumni.yml has entries.
+  Used in team.md.
+{%- endcomment -%}
+{%- assign alumni = site.data.alumni | where_exp: "a", "a.hidden != true" -%}
+{%- if alumni.size > 0 %}
+## Alumni
+
+<!-- wide -->
+<ul class="alumni">
+{%- for a in alumni %}
+  <li>{{ a.name }} &mdash; <span>{{ a.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
+{%- endfor %}
+</ul>
+{%- endif %}

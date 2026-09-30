@@ -1,0 +1,25 @@
+{%- assign root = page.root | default: "" -%}
+{%- assign here = page.url | remove_first: "/" -%}
+{%- if here == "" -%}{%- assign here = "index.html" -%}{%- endif -%}
+  <header class="site-head">
+    <a class="wordmark" href="{{ root }}index.html">
+      <!-- When you have a logo: put it in assets/img/ and uncomment this line.
+      <img class="wordmark__mark" src="{{ root }}assets/img/logo.svg" alt="">
+      -->
+      <span class="wordmark__sub">Laboratoire</span>
+      <span class="wordmark__name">SoMA</span>
+    </a>
+    <div class="site-head__end">
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{{ root }}{{ item.file }}"{% if item.file == here %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" hidden
+              aria-label="Switch to the dark theme" aria-pressed="false">
+        <span class="theme-toggle__lamp" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>

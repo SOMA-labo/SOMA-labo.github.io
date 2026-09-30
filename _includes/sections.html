@@ -1,0 +1,53 @@
+{%- comment -%}
+  Turns a page's rendered Markdown into the site's labelled rows.
+
+  Every "## Heading" in a page starts a new section. The heading becomes the
+  small label in the left column, and everything up to the next "## Heading"
+  becomes the content on the right:
+
+      <section class="band ...">
+        <div class="row">
+          <p class="label">Heading</p>
+          <div class="prose"> ...content... </div>
+        </div>
+      </section>
+
+  The first block on a page gets the tight spacing (band--tight); every later
+  one gets a hairline rule above it (band--rule).
+
+  Anything before the first "## Heading" is output as it is. Lists that come
+  from an include (news, publications, people, courses) start with the marker
+  <!-- wide -->, which drops the "prose" class so they can use the full width.
+{%- endcomment -%}
+{%- assign chunks = include.html | split: '<h2 id="' -%}
+{%- assign started = false -%}
+{%- for chunk in chunks -%}
+  {%- if forloop.first -%}
+    {%- assign pre = chunk | strip -%}
+    {%- if pre != "" %}
+{{ pre }}
+      {%- assign started = true -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign id = chunk | split: '"' | first -%}
+    {%- assign head = chunk | split: "</h2>" | first -%}
+    {%- assign label = head | remove_first: id | remove_first: '">' | strip -%}
+    {%- assign body = chunk | remove_first: head | remove_first: "</h2>" | strip -%}
+    {%- if body contains "<!-- wide -->" -%}
+      {%- assign wrap = "<div>" -%}
+      {%- assign body = body | remove: "<!-- wide -->" | strip -%}
+    {%- else -%}
+      {%- assign wrap = '<div class="prose">' -%}
+    {%- endif %}
+
+    <section class="band {% if started %}band--rule{% else %}band--tight{% endif %}" aria-labelledby="{{ id }}-h">
+      <div class="row">
+        <p class="label" id="{{ id }}-h">{{ label }}</p>
+        {{ wrap }}
+{{ body }}
+        </div>
+      </div>
+    </section>
+    {%- assign started = true -%}
+  {%- endif -%}
+{%- endfor %}

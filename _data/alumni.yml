@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------
+# ALUMNI — shown on the Team page under their own heading, once this list has
+# at least one entry. Newest first. For example:
+#
+#   - name: Full Name
+#     text: "Master's student, 2027–2028 · now at somewhere"
+#
+# ---------------------------------------------------------------------------
+
+[]

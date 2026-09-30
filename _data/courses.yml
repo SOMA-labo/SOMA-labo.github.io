@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# COURSES — the first list on the Teaching page. Newest first.
+#
+#   - when: "Fall 2025 · ICTP, Trieste, Italy"    the small label line
+#     title: "Course name"                        Markdown allowed
+#     url: https://...                            optional: links the title
+#     text: "Your role. The programme."           optional
+#     links:                                      optional
+#       - title: Course materials
+#         url: https://...
+#
+# `hidden: true` keeps an entry without showing it. Put when, title and text
+# in "double quotes".
+# ---------------------------------------------------------------------------
+
+- when: "Fall 2022–2025 · ICTP, Trieste, Italy"
+  title: "Numerical Methods in Python"
+  url: https://github.com/wrshoemaker/ictp_numerical_methods_python_course
+  text: "Developer and co-instructor. Quantitative Life Sciences diploma programme."
+  links:
+    - title: Course materials
+      url: https://github.com/wrshoemaker/ictp_numerical_methods_python_course
+
+- when: "Fall 2025 · ICTP / SISSA, Trieste, Italy"
+  title: "Ecology & Evolution"
+  text: "Guest lecturer."
+
+- when: "Fall 2014, spring 2019, fall 2019, spring 2020 · Indiana University, Bloomington, Indiana, USA"
+  title: "BIOL-L 111 — Foundations of Biology: diversity, evolution and ecology"
+  text: "Associate instructor."
+
+- when: "Fall 2018 · Indiana University, Bloomington, Indiana, USA"
+  title: "BIOL-L 113 — Biological Laboratory"
+  text: "Associate instructor."
+
+- when: "Spring 2018 · Indiana University, Bloomington, Indiana, USA"
+  title: "BIOL-L 318 — Evolution"
+  text: "Associate instructor."
+
+- when: "Spring 2017 · Indiana University, Bloomington, Indiana, USA"
+  title: "BIOL-Z 620 — [Quantitative Biodiversity](https://github.com/QuantitativeBiodiversity/QuantitativeBiodiversity)"
+  text: "Co-instructor."
+  links:
+    - title: Course materials
+      url: https://github.com/QuantitativeBiodiversity/QuantitativeBiodiversity

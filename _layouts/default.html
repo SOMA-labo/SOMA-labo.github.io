@@ -1,0 +1,25 @@
+{%- assign root = page.root | default: "" -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% unless page.minimal %}
+<a class="skip" href="#main">Skip to content</a>
+{% endunless %}
+<div class="shell">
+
+{% include header.html %}
+
+  <main id="main">
+{{ content }}
+  </main>
+
+{% include footer.html %}
+
+</div>
+
+<script src="{{ root }}assets/js/theme.js" defer></script>
+</body>
+</html>

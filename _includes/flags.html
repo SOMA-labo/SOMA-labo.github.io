@@ -1,0 +1,28 @@
+{%- comment -%}
+  One or more flags, from two-letter codes in _data/countries.yml.
+  Usage: {% include flags.html codes=person.flags %}
+  Screen readers get the country names, e.g. "Italy and the United Nations".
+{%- endcomment -%}
+{%- assign codes = include.codes -%}
+{%- if codes and codes.size > 0 -%}
+{%- assign shown = "" -%}
+{%- assign names = "" | split: "" -%}
+{%- for code in codes -%}
+  {%- assign c = site.data.countries[code] -%}
+  {%- if c -%}
+    {%- if shown == "" -%}{%- assign shown = c.flag -%}{%- else -%}{%- assign shown = shown | append: " " | append: c.flag -%}{%- endif -%}
+    {%- assign names = names | push: c.name -%}
+  {%- else -%}
+    {%- assign shown = shown | append: "[" | append: code | append: "?]" -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if names.size > 1 -%}
+  {%- assign lastname = names | last -%}
+  {%- assign n = names.size | minus: 1 -%}
+  {%- assign firsts = names | slice: 0, n | join: ", " -%}
+  {%- assign label = firsts | append: " and " | append: lastname -%}
+{%- else -%}
+  {%- assign label = names | first -%}
+{%- endif -%}
+<span class="person__flags" role="img" aria-label="{{ label }}">{{ shown }}</span>
+{%- endif -%}

@@ -1,0 +1,62 @@
+{%- comment -%}
+  The publications list. Papers come from _data/publications.yml in the order
+  written there (newest first), grouped under a heading for each year. Papers
+  older than site.publications_first_full_year share one heading, e.g.
+  "2016 & earlier". Lab members (site.lab_members) are set in bold.
+{%- endcomment -%}
+{%- assign cutoff = site.publications_first_full_year -%}
+{%- assign last_year = cutoff | minus: 1 -%}
+{%- capture early_label %}{{ last_year }} &amp; earlier{% endcapture -%}
+{%- assign current = "" -%}
+{%- for p in site.data.publications -%}
+{%- unless p.hidden -%}
+  {%- assign y = p.year | plus: 0 -%}
+  {%- if y < cutoff -%}{%- assign group = early_label -%}{%- else -%}{%- assign group = p.year | append: "" -%}{%- endif -%}
+  {%- if group != current -%}
+    {%- unless current == "" %}
+    </ul>
+  </div>
+</section>
+    {%- endunless %}
+
+<section class="year-group">
+  <div class="row">
+    <p class="label label--num">{{ group }}</p>
+    <ul class="pubs">
+    {%- assign current = group -%}
+  {%- endif -%}
+  {%- assign authors = p.authors | escape -%}
+  {%- for name in site.lab_members -%}
+    {%- capture bold %}<b class="me">{{ name }}</b>{% endcapture -%}
+    {%- assign authors = authors | replace: name, bold -%}
+  {%- endfor -%}
+  {%- assign link = p.journal | default: p.preprint %}
+
+      <li class="pub">
+        <h3>{% if link %}<a href="{{ link }}">{% endif %}{{ p.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if link %}</a>{% endif %}</h3>
+        <p class="pub__authors">{{ authors }}{% if p.note %} &nbsp;<span class="pub__venue">{{ p.note | escape }}</span>{% endif %}</p>
+        <p class="pub__venue">{{ p.venue | escape }}</p>
+        {%- if p.journal or p.preprint or p.data or p.code %}
+        <ul class="pub__links">
+          {%- if p.journal %}
+          <li><a href="{{ p.journal }}">Journal</a></li>
+          {%- endif %}
+          {%- if p.preprint %}
+          <li><a href="{{ p.preprint }}">Preprint</a></li>
+          {%- endif %}
+          {%- if p.data %}
+          <li><a href="{{ p.data }}">Data</a></li>
+          {%- endif %}
+          {%- if p.code %}
+          <li><a href="{{ p.code }}">Code</a></li>
+          {%- endif %}
+        </ul>
+        {%- endif %}
+      </li>
+{%- endunless -%}
+{%- endfor -%}
+{%- unless current == "" %}
+    </ul>
+  </div>
+</section>
+{%- endunless %}

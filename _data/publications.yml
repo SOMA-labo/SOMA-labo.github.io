@@ -1,0 +1,211 @@
+# ---------------------------------------------------------------------------
+# PUBLICATIONS — newest first. The page groups them under a heading per year.
+#
+# Each paper is:
+#
+#   - year: 2026
+#     title: "Title as published"        Markdown: *Bacillus subtilis* for italics
+#     authors: "Shoemaker, W.R., and J. Grilli"
+#     venue: "mSystems, 11(3):e01221-25"
+#     journal: https://doi.org/...       \
+#     preprint: https://doi.org/...       |  any you have; leave out the rest.
+#     data: https://doi.org/...           |  The title links to the journal
+#     code: https://github.com/...       /   version, or else the preprint.
+#
+# Lab members' names are bolded automatically — the list of names to look for
+# is `lab_members` in _config.yml. Type author lists as plain text.
+#
+# Optional:  note: "*equal contribution"   small grey text after the authors
+#            hidden: true                  keep the entry but don't show it
+#
+# Always put title, authors and venue in "double quotes".
+# ---------------------------------------------------------------------------
+
+# ------------------------------------------------------------------ 2026 ----
+
+- year: 2026
+  title: "An Interpretation, Survey, and Outlook on Microbial Macroecology"
+  authors: "Shoemaker, W.R."
+  venue: "Environmental Microbiology, 28(6):e70314"
+  journal: https://doi.org/10.1111/1462-2920.70314
+  preprint: https://doi.org/10.32942/X2008N
+  code: https://github.com/wrshoemaker/micro_macro_perspective
+
+- year: 2026
+  title: "The macroecological dynamics of sojourn trajectories in the human gut microbiome"
+  authors: "Shoemaker, W.R., and J. Grilli"
+  venue: "mSystems, 11(3):e01221-25"
+  journal: https://doi.org/10.1128/msystems.01221-25
+  data: https://doi.org/10.5281/zenodo.15754231
+  code: https://github.com/wrshoemaker/sojourn_macroeco
+
+- year: 2026
+  title: "Leveraging DNA and RNA oscillatory dynamics to investigate the ecology and physiology of a freshwater microbial community"
+  authors: "Shoemaker, W.R., M. Dal Bello, and J. Grilli"
+  venue: "bioRxiv, 2026.02.24.707719"
+  preprint: https://doi.org/10.64898/2026.02.24.707719
+  code: https://github.com/wrshoemaker/rrna_rdna
+
+- year: 2026
+  title: "Evolutionary bioenergetics of sporulation"
+  authors: "Karakoç, C., W.R. Shoemaker, and J.T. Lennon"
+  venue: "Proceedings of the National Academy of Sciences, 123(6):e2524274123"
+  journal: https://doi.org/10.1073/pnas.2524274123
+
+# ------------------------------------------------------------------ 2025 ----
+
+- year: 2025
+  title: "A balance between environmental filtering and competitive exclusion modulates the macroecology of alternative stable states in microbial communities"
+  authors: "Bupu, A., W.R. Shoemaker, O. Mazzarisi, and J. Grilli"
+  venue: "bioRxiv, 2025.12.19.695337"
+  preprint: https://doi.org/10.64898/2025.12.19.695337
+
+- year: 2025
+  title: "Longitudinal dynamics of ethanol-resistant microbes and sporulation in the human gut"
+  authors: "Miklavcic, U., A. Mahnic, W.R. Shoemaker, J. Grilli, S. Janezic, and M. Rupnik"
+  venue: "bioRxiv, 2025.07.08.663423"
+  preprint: https://doi.org/10.1101/2025.07.08.663423
+
+- year: 2025
+  title: "Macroecological patterns in experimental microbial communities"
+  authors: "Shoemaker, W.R., Á. Sánchez, and J. Grilli"
+  venue: "PLOS Computational Biology, 21(5):e1013044"
+  journal: https://doi.org/10.1371/journal.pcbi.1013044
+  data: https://doi.org/10.5281/zenodo.8393847
+  code: https://github.com/wrshoemaker/experimental_macroecology
+
+# ------------------------------------------------------------------ 2024 ----
+
+- year: 2024
+  title: "Eco-evolutionary dynamics: The repeatability of diversification in an experimental microbial community"
+  authors: "Shoemaker, W.R."
+  venue: "Current Biology, 34(4):R140–R143"
+  journal: https://doi.org/10.1016/j.cub.2023.12.053
+
+- year: 2024
+  title: "Investigating macroecological patterns in coarse-grained microbial communities using the stochastic logistic model of growth"
+  authors: "Shoemaker, W.R., and J. Grilli"
+  venue: "eLife, 12:RP89650"
+  journal: https://doi.org/10.7554/eLife.89650.3
+  data: https://doi.org/10.5281/zenodo.7692046
+  code: https://github.com/wrshoemaker/macroeco_phylo
+
+# ------------------------------------------------------------------ 2023 ----
+
+- year: 2023
+  title: "A macroecological perspective on genetic diversity in the human gut microbiome"
+  authors: "Shoemaker, W.R."
+  venue: "PLOS ONE, 18(7):e0288926"
+  journal: https://doi.org/10.1371/journal.pone.0288926
+  data: https://doi.org/10.5281/zenodo.6793770
+  code: https://github.com/wrshoemaker/StrainPrevalence
+
+- year: 2023
+  title: "Bacteria-phage coevolution with a seed bank"
+  authors: "Schwartz, D.A., W.R. Shoemaker, A. Măgălie, J.S. Weitz, and J.T. Lennon"
+  venue: "The ISME Journal, 17(8):1315–1325"
+  journal: https://doi.org/10.1038/s41396-023-01449-2
+  data: https://doi.org/10.5281/zenodo.7786196
+  code: https://github.com/LennonLab/coevo-seedbank-seq
+
+- year: 2023
+  title: "Ecological Stability Emerges at the Level of Strains in the Human Gut Microbiome"
+  authors: "Wolff, R., W.R. Shoemaker, and N.R. Garud"
+  venue: "mBio, 14(2):e02502-22"
+  journal: https://doi.org/10.1128/mbio.02502-22
+
+# ------------------------------------------------------------------ 2022 ----
+
+- year: 2022
+  title: "Seed banks alter the molecular evolutionary dynamics of *Bacillus subtilis*"
+  authors: "Shoemaker, W.R., E. Polezhaeva, K.B. Givens, and J.T. Lennon"
+  venue: "Genetics, 221(2):iyac071"
+  journal: https://doi.org/10.1093/genetics/iyac071
+  data: https://doi.org/10.5281/zenodo.5549311
+  code: https://github.com/wrshoemaker/Bacillus_Evol_Timeseries
+
+- year: 2022
+  title: "Predicting Parallelism and Quantifying Divergence in Microbial Evolution Experiments"
+  authors: "Shoemaker, W.R., and J.T. Lennon"
+  venue: "mSphere, 7(1):e00672-21"
+  journal: https://doi.org/10.1128/msphere.00672-21
+  data: https://zenodo.org/record/3779341
+  code: https://github.com/LennonLab/ParEvol
+
+- year: 2022
+  title: "Comparative Population Genetics in the Human Gut Microbiome"
+  authors: "Shoemaker, W.R., D. Chen, and N.R. Garud"
+  venue: "Genome Biology and Evolution, 14(1):evab116"
+  journal: https://doi.org/10.1093/gbe/evab116
+  code: https://github.com/garudlab/CompPopGenMicrobiomeReview
+
+- year: 2022
+  title: "An experimental test of disease resistance function in the skin-associated bacterial communities of three tropical amphibian species"
+  authors: "Hughey, M.C., E.A. Rebollar, R.N. Harris, R. Ibáñez, S.C. Loftus, L.L. House, M.C. Bletz, D. Medina, M.K. Riley, W.R. Shoemaker, M.C. Swartwout, and L.K. Belden"
+  venue: "FEMS Microbiology Ecology, 98(3):fiac023"
+  journal: https://doi.org/10.1093/femsec/fiac023
+
+# ------------------------------------------------------------------ 2021 ----
+
+- year: 2021
+  title: "Molecular Evolutionary Dynamics of Energy Limited Microorganisms"
+  authors: "Shoemaker, W.R., E. Polezhaeva, K.B. Givens, and J.T. Lennon"
+  venue: "Molecular Biology and Evolution, 38(10):4532–4545"
+  journal: https://doi.org/10.1093/molbev/msab195
+  data: https://doi.org/10.5281/zenodo.4517573
+  code: https://github.com/MURI2/Phylo_Evol_Timeseries
+
+- year: 2021
+  title: "Microbial population dynamics and evolutionary outcomes under extreme energy limitation"
+  authors: "Shoemaker, W.R., S.E. Jones, M.E. Muscarella, M.G. Behringer, B.K. Lehmkuhl, and J.T. Lennon"
+  venue: "Proceedings of the National Academy of Sciences, 118(33):e2101691118"
+  journal: https://doi.org/10.1073/pnas.2101691118
+  data: https://doi.org/10.5281/zenodo.4458917
+  code: https://github.com/LennonLab/LTDE
+
+# ------------------------------------------------------------------ 2018 ----
+
+- year: 2018
+  title: "Evolutionary determinants of genome-wide nucleotide composition"
+  authors: "Long, H., W. Sung, S. Kucukyildirim, E. Williams, S.F. Miller, W. Guo, C. Patterson, C. Gregory, C. Strauss, C. Stone, C. Berne, D. Kysela, W.R. Shoemaker, M.E. Muscarella, H. Luo, J.T. Lennon, Y.V. Brun, and M. Lynch"
+  venue: "Nature Ecology & Evolution, 2(2):237–240"
+  journal: https://doi.org/10.1038/s41559-017-0425-y
+
+- year: 2018
+  title: "Evolution with a seed bank: The population genetic consequences of microbial dormancy"
+  authors: "Shoemaker, W.R., and J.T. Lennon"
+  venue: "Evolutionary Applications, 11(1):60–75"
+  journal: https://doi.org/10.1111/eva.12557
+  code: https://github.com/LennonLab/EvoDorm
+
+# ------------------------------------------------------------------ 2017 ----
+
+- year: 2017
+  title: "A macroecological theory of microbial biodiversity"
+  authors: "Shoemaker, W.R.*, K.J. Locey*, and J.T. Lennon"
+  note: "*equal contribution"
+  venue: "Nature Ecology & Evolution, 1(5):0107"
+  journal: https://doi.org/10.1038/s41559-017-0107
+  code: https://github.com/LennonLab/MicrobialBiodiversityTheory
+
+- year: 2017
+  title: "Whole-Genome Sequence of the Soil Bacterium *Micrococcus* sp. KBS0714"
+  authors: "Kuo, V., W.R. Shoemaker, M.E. Muscarella, and J.T. Lennon"
+  venue: "Genome Announcements, 5(32):e00697-17"
+  journal: https://doi.org/10.1128/genomeA.00697-17
+  code: https://github.com/LennonLab/Micrococcus
+
+# ------------------------------------------------- earlier (one heading) ----
+
+- year: 2016
+  title: "Direct and Indirect Horizontal Transmission of the Antifungal Probiotic Bacterium *Janthinobacterium lividum* on Green Frog (*Lithobates clamitans*) Tadpoles"
+  authors: "Rebollar, E.A., S.J. Simonetti, W.R. Shoemaker, and R.N. Harris"
+  venue: "Applied and Environmental Microbiology, 82(8):2457–2466 (2016)"
+  journal: https://doi.org/10.1128/AEM.04147-15
+
+- year: 2015
+  title: "Genome Sequence of the Soil Bacterium *Janthinobacterium* sp. KBS0711"
+  authors: "Shoemaker, W.R., M.E. Muscarella, and J.T. Lennon"
+  venue: "Genome Announcements, 3(3):e00689-15 (2015)"
+  journal: https://doi.org/10.1128/genomeA.00689-15
+  code: https://github.com/LennonLab/JanthinoKBS0711

@@ -1,0 +1,26 @@
+{%- assign root = page.root | default: "" -%}
+  <footer class="site-foot">
+    {%- unless page.minimal %}
+    <div>
+      <p class="label">{{ site.title }}</p>
+      <p>{{ site.address | join: "<br>
+         " }}</p>
+    </div>
+    <div>
+      <p class="label">Contact</p>
+      <ul class="foot-links">
+        <li>{{ site.email }}</li>
+        <li><a href="{{ root }}contact.html">Contact page</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Elsewhere</p>
+      <ul class="foot-links">
+        {%- for link in site.elsewhere %}
+        <li><a href="{{ link.url }}"{% if link.rel %} rel="{{ link.rel }}"{% endif %}>{{ link.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endunless %}
+    <p class="colophon">{{ site.copyright }}</p>
+  </footer>
