@@ -7,6 +7,7 @@ description: >
   microbial communities assemble, fluctuate and evolve, tested against
   experiments and sequencing data.
 og: true
+math: true
 
 # The opening, next to the sculpture.
 kicker: Scales of Microbial Architectonics
@@ -21,26 +22,15 @@ lede: >
 
 ## Our lab
 
- A gram of soil holds thousands of bacterial species, and no two grams
-hold the same ones. 
 
 
 
-Yet across disparate environments and experiments,
-the same statistical regularities keep appearing. 
+We live on a microbial world. The vast majority of Earth's $$\sim 10^{30}$$ organisms and $$\sim 10^{12}$$ species are microbes, comprising the bulk of known metabolic, genetic, and taxonomic diversity. Yet across disparate environments, we repeatedly observe the same statistical regularities in how microbial abundances are distributed across space, fluctuate over time, and ultimately comprise the diversity of communities. In Laboratoire SoMA, we leverage these regularities to investigate, predict, and, ultimately, manipulate the microbial world. 
 
-We leverage these regularities to investigate the microbial world. Such patterns help us learn how abundances
-are distributed across space, how they fluctuate through time, and how the diversity
-of a community can be predicted and, ultimately, manipulated.
 
-*Architectonics* is the word we use for our approach of paring down the seemingly complicated structure of microbial life, examining how our identified rules vary as one moves from a single strain to an entire biome.
+*Architectonics* is the word we use for our approach of paring down the seemingly complicated structure of microbial life, examining how our identified rules vary as one moves from a single strain to an entire biome. This approach is deliberately minimal. We ask how far a model with few parameters, often no more than stochastic growth with a carrying capacity, can be pushed before it fails. Failure is often the interesting part, as it is where unexplained physiology, ecology, and evolutionary history leave their signatures and reveal our ignorance. This rigorous approach ultimately provides justification for the level of granularity necessary to understand a phenomenon. 
 
-Our approach is deliberately minimal. We ask how far a model with
-few parameters, often no more than stochastic growth with a carrying
-capacity, can be pushed before it fails. Failure is often the interesting part, as it is where unexplained physiology, ecology,
-and evolutionary history leave their signatures and reveal our ignorance. We are not opposed to large-scale models and are increasingly interested in identifying microbiological problems where they provide the most benefit. Our work
-sits between **community ecology** and **population
-genetics**, unified by principles and tools from **statistical physics**. We are a young lab and most of our work will be computational, though we intend to perform targeted experiments on the physiological and evolutionary consequences of life-history strategies.
+Our work lies between **macroecology**, **community ecology**, and **population genetics**, with our overarching approach inspired by principles and tools from **statistical physics**. We are a young lab and most of our work will be computational, though we intend to perform targeted experiments on the physiological and evolutionary consequences of life-history strategies.
 
 [What we work on](research.html) &nbsp;·&nbsp;
 [What we have published](publications.html) &nbsp;·&nbsp;
