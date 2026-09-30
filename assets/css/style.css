@@ -455,7 +455,7 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
 .row > .label { padding-top: 0.45rem; }
 
 @media (max-width: 47rem) {
-  .row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .row { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
   .row > .label { padding-top: 0; }
 }
 
@@ -915,6 +915,17 @@ a.link:hover { color: var(--glow); background-size: 100% 2px; }
   color: var(--glow);
   font-style: normal;
 }
+
+/* --------------------------------------------------------------------------
+   12b. Math (KaTeX, only on pages with `math: true`)
+   -------------------------------------------------------------------------- */
+
+/* A display equation wider than the column scrolls sideways instead of
+   pushing the page wider than the phone. */
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.2em 0; }
+/* KaTeX's default 1.21em is sized for serif body text; this sits better
+   beside Instrument Sans. */
+.katex { font-size: 1.1em; }
 
 /* --------------------------------------------------------------------------
    13. Print

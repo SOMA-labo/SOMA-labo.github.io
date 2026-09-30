@@ -105,6 +105,28 @@ caption: >
   A sentence of caption.
 ```
 
+### Equations
+
+Add `math: true` to the block at the top of a page, then write LaTeX between
+double dollar signs. Inside a sentence:
+
+```markdown
+The carrying capacity $$K$$ sets the mean abundance.
+```
+
+On lines of its own, for a centred equation:
+
+```markdown
+$$
+\frac{dx}{dt} = \frac{x}{\tau}\left(1 - \frac{x}{K}\right) + \sqrt{\frac{\sigma}{\tau}}\, x\, \eta(t)
+$$
+```
+
+Single dollars (`$x$`) are left as plain text. Pages without `math: true`
+don't load the math library at all. To turn it on for every page instead, add
+`math: true` to `_config.yml`. Math also works in the lists in `_data/` and in
+`_strands/`, as long as the page that shows them has `math: true`.
+
 ### Hiding something without deleting it
 
 - An item in a `_data/` list, a person, or a strand: add `hidden: true`.
