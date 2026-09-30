@@ -17,14 +17,17 @@ plate:
   caption: Pierre Soulages, *Malerei 15*, 1957. © ADAGP, Paris.
 
 facts:
-  - when: 2021–2026
+  - when: 2022–2026
     what: Postdoc, ICTP
     flags: [IT, UN]
-  - when: 2020
-    what: PhD in Biology, Indiana University
+  - when: 2020–2022
+    what: Postdoc, UCLA
     flags: [US]
-  - when: ""
-    what: BSc, James Madison University
+  - when: 2020
+    what: PhD Biology, Indiana University
+    flags: [US]
+  - when: 2014
+    what: BSc Biology, James Madison University
     flags: [US]
 
 links:
