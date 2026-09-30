@@ -11,13 +11,11 @@ math: true
 
 # The opening, next to the sculpture.
 kicker: Scales of Microbial Architectonics
-heading: The architecture of microbial life investigated across scales of organization.
+heading: The architecture of microbial life, investigated across scales of organization.
 lede: >
-  SoMA is a quantitative microbial life science group in Génomique
-  Métabolique at Genoscope, part of the Institut François Jacob (CEA)
-  in Évry-Courcouronnes. We build and test models of how microbial communities
-  assemble, fluctuate and evolve against experimental
-  and observational datasets.
+  SoMA is a quantitative microbial life science group in the Génomique
+  Métabolique unit at Genoscope, part of the Institut François Jacob (CEA)
+  in Évry-Courcouronnes. We build models of how microbial communities assemble, fluctuate and evolve, testing them against experimental and observational data.
 ---
 
 ## Our lab
